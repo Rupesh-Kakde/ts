@@ -1,0 +1,36 @@
+<div style="max-width: 700px; margin: 35px auto; padding: 20px; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center; color: #0d47a1;">Notepad Application</h2>
+  <p style="text-align: center; color: #555;">Current Date and Time: {{ currentTime }}</p>
+  <div style="padding: 18px; border: 1px solid #ccc; border-radius: 10px; background: #f5f9ff;">
+    <textarea
+      [(ngModel)]="noteText"
+      rows="4"
+      placeholder="Write your note here..."
+      style="width: 100%; padding: 10px; box-sizing: border-box; resize: vertical;"></textarea>
+    <button
+      (click)="addNote()"
+      [disabled]="noteText.trim() === ''"
+      style="margin-top: 10px; padding: 10px 22px; background: #1976d2; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Add Note
+    </button>
+  </div>
+  <h3 style="margin-top: 25px;">Saved Notes</h3>
+  <p *ngIf="notes.length === 0">No notes available.</p>
+  <div *ngFor="let note of notes" style="margin-top: 14px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+    <div *ngIf="editingId !== note.id">
+      <p style="white-space: pre-wrap;">{{ note.text }}</p>
+      <small style="color: #666;">Last updated: {{ note.dateTime }}</small>
+      <div style="margin-top: 12px;">
+        <button (click)="editNote(note)" style="padding: 8px 16px; margin-right: 8px; cursor: pointer;">Edit</button>
+        <button (click)="deleteNote(note.id)" style="padding: 8px 16px; background: #c62828; color: white; border: none; border-radius: 4px; cursor: pointer;">Delete</button>
+      </div>
+    </div>
+    <div *ngIf="editingId === note.id">
+      <textarea [(ngModel)]="editText" rows="4" style="width: 100%; padding: 10px; box-sizing: border-box;"></textarea>
+      <div style="margin-top: 10px;">
+        <button (click)="updateNote(note)" [disabled]="editText.trim() === ''" style="padding: 8px 16px; margin-right: 8px; cursor: pointer;">Update</button>
+        <button (click)="cancelEdit()" style="padding: 8px 16px; cursor: pointer;">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

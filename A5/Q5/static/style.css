@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Clean, premium system typography stack */
+    font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body {
+    /* Rich, deep-sea gradient background */
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0d9488 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box,
+.welcome-box {
+    width: 420px;
+    /* Frosted dark-mode glass panel */
+    background: rgba(15, 23, 42, 0.9);
+    padding: 40px;
+    border-radius: 16px;
+    /* Electric cyan drop-glow aura */
+    box-shadow: 0 15px 35px rgba(13, 148, 136, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    /* High-contrast neon cyan text gradient */
+    background: linear-gradient(to right, #38bdf8, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+p {
+    text-align: center;
+    /* Light muted slate for readability on dark backgrounds */
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 16px;
+    /* Blends into the dark box container */
+    background: rgba(30, 41, 59, 0.5);
+    border: 2px solid #334155;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Neon laser focus effect */
+input:focus {
+    outline: none;
+    border-color: #06b6d4;
+    background: rgba(30, 41, 59, 0.8);
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    /* Electric cyan to ocean blue gradient button */
+    background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Fluid responsive lifting effect on hover */
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.welcome-box {
+    text-align: center;
+}
+
+/* Bright neon mint-green for successful welcome messaging */
+.welcome-box h1 {
+    background: linear-gradient(to right, #34d399, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px;
+    /* High-contrast coral pink button for secondary action */
+    background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(244, 63, 94, 0.3);
+    transition: all 0.2s ease;
+}
+
+.welcome-box a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(244, 63, 94, 0.5);
+    filter: brightness(1.1);
+}
+
+.welcome-box a:active {
+    transform: translateY(1px);
+}

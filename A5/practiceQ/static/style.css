@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Swapped to a razor-sharp modern font stack */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    /* Deep cosmic background with subtle violet undertones */
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0c1b 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.login-box,
+.welcome-box {
+    width: 420px;
+    /* Dark glassmorphism card structure */
+    background: rgba(26, 26, 46, 0.8);
+    padding: 40px;
+    border-radius: 16px;
+    /* Electric violet glow to isolate the box from the dark background */
+    box-shadow: 0 20px 50px rgba(123, 31, 162, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    /* Blazing cyberpunk hot pink to purple gradient */
+    background: linear-gradient(135deg, #ff007f 0%, #7b1fa2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+p {
+    text-align: center;
+    /* Crisp muted silver for readability on dark surfaces */
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #cbd5e1;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 16px;
+    /* Border matching the dark interface */
+    border: 2px solid #2e2e4e;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    background: #131324;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hyper-bright radioactive pink input focus activation */
+input:focus {
+    outline: none;
+    border-color: #ff007f;
+    background: #1a1a3a;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.25);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    /* High-contrast magenta gradient action button */
+    background: linear-gradient(135deg, #ff007f 0%, #aa00ff 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(255, 0, 127, 0.3);
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Kinetic spring hover feedback */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 0, 127, 0.5);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.welcome-box {
+    text-align: center;
+}
+
+/* Radioactive lime matrix green for successful authorized access states */
+.welcome-box h1 {
+    background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 30px;
+    /* Cyan electric current button link for final landing confirmation */
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    color: #0f0c1b;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+    transition: all 0.2s ease;
+}
+
+.welcome-box a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 242, 254, 0.5);
+    filter: brightness(1.1);
+}
+
+.welcome-box a:active {
+    transform: translateY(1px);
+}
